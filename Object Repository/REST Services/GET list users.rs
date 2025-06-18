@@ -26,7 +26,7 @@
    <migratedVersion>5.4.1</migratedVersion>
    <path></path>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://reqres.in/api/users?page=5</restUrl>
+   <restUrl>https://reqres.in/api/users?page=${page}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -35,6 +35,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>405c990b-a8cf-4a49-91da-742d77a0e128</id>
+      <masked>false</masked>
+      <name>page</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

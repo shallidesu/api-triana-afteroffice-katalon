@@ -25,7 +25,7 @@ token = WS.getElementPropertyValue(login_response, 'token')
 
 println(token)
 
-users_response = WS.sendRequest(findTestObject('REST Services/GET list users'))
+users_response = WS.sendRequest(findTestObject('REST Services/GET list users', [('page') : page]))
 
 WS.verifyResponseStatusCode(users_response, 200)
 
@@ -33,5 +33,5 @@ page = WS.getElementPropertyValue(users_response, 'page')
 
 println(page)
 
-WS.verifyElementPropertyValue(users_response, 'page', '5')
+WS.verifyElementPropertyValue(users_response, 'page', page)
 

@@ -25,7 +25,7 @@ token = WS.getElementPropertyValue(login_response, 'token')
 
 println(token)
 
-create_response = WS.sendRequest(findTestObject('REST Services/POST create a new user'))
+create_response = WS.sendRequest(findTestObject('REST Services/POST create a new user', [('name') : name, ('job') : job]))
 
 WS.verifyResponseStatusCode(create_response, 201)
 
